@@ -1,2 +1,2 @@
 # CollegeHub
-SSIP hackathon Project for college admission Information
+SSIP hackathon Project for college admission Information : College Hub
