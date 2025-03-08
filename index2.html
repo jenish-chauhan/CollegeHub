@@ -1,158 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #faefef;
+        margin: 0;
+        padding: 0;
+      }
+      .navbar {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        padding: 15px;
+        text-align: center;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+      }
+      .college-header {
+        text-align: center;
+        border: 4px solid rgba(0, 0, 0, 0.2);
+        background-color: white;
+      }
+      .college-header img {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        object-fit: scale-down;
+      }
+      .college-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .info-box {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .official-link {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .official-link a {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="announcements.html">Announcements</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admission Alerts</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fbeee6;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    <div class="container">
+      <div class="college-header">
+        <h1>Gujarat Technological University</h1>
+        <img
+          src="https://www.gtu.ac.in/E-Library/assets/img/logo.png"
+          alt="Gujarat Technological University"
+        />
+      </div>
 
-    .navbar {
-      background-color: #015C92;
-      padding: 15px;
-      text-align: center;
-      width: 100%;
-      height: 40px;
-    }
-
-    .navbar a {
-      color: #FBEEE6;
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 18px;
-    }
-
-    .profile {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .profile img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-
-    .container {
-      text-align: center;
-      padding: 50px;
-      width: 80%;
-    }
-
-    .btn {
-      background-color: #015C92;
-      color: #FBEEE6;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .colleges {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 20px;
-      width: 100%;
-    }
-
-    .college {
-      background: #bbd3e2 ;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      width: 80%;
-      margin: auto;
-      box-shadow: 0 5 100 100 black;
-    }
-
-    .college img {
-      width: 150px;
-      height: 140px;
-      border-radius: 10px;
-    }
-
-    .college-info {
-      text-align: left;
-    }
-
-    .pfp {
-      height: 100%;
-      width: 100%;
-    }
-
-    .pfn {
-      font-size: 20px;
-      font-weight: bold;
-      color: #FBEEE6;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="profile">
-    <img
-      src="https://th.bing.com/th?id=OIP.Q19F0XVat8Jf9hUdsBotIAHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-      alt="Student Profile" class="pfp" />
-    <span class="pfn">Jay Varma</span>
-  </div>
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="contact.html">Colleges</a>
-    <a href="contact.html">Trending</a>
-    <a href="announcements.html">Announcements</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <div class="container">
-    <h1>Welcome to College Hub</h1>
-    <p>
-      Stay updated with the latest admission announcements from various
-      universities.
-    </p>
-    <a href="announcements.html" class="btn">View Announcements</a>
-    <div class="colleges">
-      <div class="college">
-        <img src="https://cdn.freelogovectors.net/wp-content/uploads/2022/03/gtu_logo_freelogovectors.net_.png"
-          alt="College 1" class="gtu" />
-        <div class="college-info">
-          <h3>Gujarat Technological University</h3>
-          <p>Top ranked university for engineering and management courses.</p>
-          <p><strong>Admission Start Date:</strong> April 15, 2025</p>
+      <div class="college-info">
+        <div class="info-box">
+          <h2>Admission Criteria</h2>
+          <p>
+            Students must have a minimum of 60% in their previous education
+            level. Entrance exam scores may also be required.
+          </p>
+        </div>
+        <div class="info-box">
+          <h2>Vacancies</h2>
+          <p>Total Available Seats: 500</p>
+          <p>Engineering: 200 | Management: 150 | Science: 150</p>
+        </div>
+        <div class="info-box">
+          <h2>Admission Timeline</h2>
+          <p><strong>Start Date:</strong> April 15, 2025</p>
+          <p><strong>End Date:</strong> June 30, 2025</p>
+        </div>
+        <div class="info-box">
+          <h2>Additional Features</h2>
+          <ul>
+            <li>Highly qualified faculty</li>
+            <li>Modern labs and libraries</li>
+            <li>100% placement assistance</li>
+            <li>Scholarship programs available</li>
+          </ul>
         </div>
       </div>
-      <div class="college">
-        <img src="https://th.bing.com/th/id/OIP.2llHEk8aMAdJUV1VenDv2wHaJM?rs=1&pid=ImgDetMain" alt="College 2" />
-        <div class="college-info">
-          <h3>Gujarat University</h3>
-          <p>Known for its research programs and high placement rates.</p>
-          <p><strong>Admission Start Date:</strong> May 18, 2025</p>
-        </div>
-      </div>
-      <div class="college">
-        <img src="https://i.pinimg.com/originals/35/4e/41/354e41b970004cac05cbe77bbc681ad8.png" alt="College 3" />
-        <div class="college-info">
-          <h3>Parul University</h3>
-          <p>Offers excellent undergraduate and postgraduate programs.</p>
-          <p><strong>Admission Start Date:</strong> March 20, 2025</p>
-        </div>
+
+      <div class="official-link">
+        <a href="https://www.gtu.ac.in" target="_blank"
+          >Visit Official Website</a
+        >
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
