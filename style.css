@@ -3,7 +3,11 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+<<<<<<< HEAD
   background-color: #faefef;
+=======
+  background-color: #f8f9fa;
+>>>>>>> 4cd9daf3333029b0f0ebc71ef0653841dfd7327d
   color: #333;
   transition: all 0.3s ease-in-out;
 }
@@ -13,7 +17,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+<<<<<<< HEAD
   background: linear-gradient(135deg, #6a11cb, #2575fc);
+=======
+  background: linear-gradient(to right, #4a90e2, #0056b3);
+>>>>>>> 4cd9daf3333029b0f0ebc71ef0653841dfd7327d
   padding: 15px 50px;
   color: white;
 }
@@ -87,7 +95,11 @@ body {
 
 .slide img {
   width: 100%;
+<<<<<<< HEAD
   height: 400px;
+=======
+  height: 250px;
+>>>>>>> 4cd9daf3333029b0f0ebc71ef0653841dfd7327d
   object-fit: cover;
   border-radius: 8px;
 }
