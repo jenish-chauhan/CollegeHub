@@ -19,3 +19,5 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.listen(9995, () => {
     console.log('server is listening at port:9995');
 });
+
+//Connecting to the database
