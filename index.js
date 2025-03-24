@@ -1,6 +1,6 @@
-require express from 'express';
+import express from 'express';
 const app = express();
-require path from 'path';
+import path from 'path';
 app.use(express.static(path.join(__dirname, 'public')));
-require mongoose from 'mongoose';
+import mongoose from 'mongoose';
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
