@@ -1,23 +1,31 @@
-const express = require('express');
-const app = express();
+const express = require("express");
 const mongoose = require("mongoose");
-const path = require('path');
-const bodyParser = require('body-parser');
-const methodOverride = require("method-override");
+const College = require("./models/list"); // Ensure this matches your model filename
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.set(methodOverride('_method'));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'views')));
-app.use(express.static(path.join(__dirname, 'node_modules')));
+const app = express();
+const PORT = 8080;
 
-//Creating a local server 
+// Database Connection
+mongoose
+  .connect("mongodb://127.0.0.1:27017/collegehub")
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
 
-app.listen(9995, () => {
-    console.log('server is listening at port:9995');
+// Middleware
+app.set("view engine", "ejs");
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+// Routes
+app.get("/colleges", async (req, res) => {
+  try {
+    const clg = await College.find({}); // Fetch all documents from the 'lists' collection
+    res.render("index", { clg }); // Pass the retrieved colleges to the view
+  } catch (err) {
+    res.status(500).send("Server Error");
+  }
 });
 
-//Connecting to the database
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
